@@ -1,4 +1,9 @@
+/* eslint-disable vue/multi-word-component-names */
 import { createApp } from 'vue'
 import App from './App.vue'
+import VueApexCharts from 'vue3-apexcharts'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(VueApexCharts)
+app.component('apexchart', VueApexCharts)
+app.mount('#app')
